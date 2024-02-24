@@ -18,7 +18,15 @@ double Gehege::getMaxPlatz() const
 {
     return MaxPlatz;
 }
+double Gehege::getPlatz()
+{  double sum=0;
+    for(const auto&t1:tieren)
+    {
+        sum+=t1.getPlatzbedarf();
 
+    }
+    return sum;
+}
 bool Gehege::aufnehmen(const Herde &h1)
 {
 
@@ -36,15 +44,7 @@ bool Gehege::aufnehmen(const Herde &h1)
 
 }
 
-double Gehege::getPlatz()
-{  double sum=0;
-    for(const auto&t1:tieren)
-    {
-        sum+=t1.getPlatzbedarf();
 
-    }
-    return sum;
-}
 
 std::vector<Herde> Gehege::getTieren() const
 {

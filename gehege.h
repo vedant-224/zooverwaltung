@@ -33,10 +33,6 @@ public:
 
 
 
-
-
-
-
 private:
     std:: vector<Herde> Raubtiere;
 
